@@ -1,0 +1,518 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercises on Approximating Derivatives, the Method of Undetermined Coefficients and Richardson Extrapolation &#8212; Elementary Numerical Analysis (Julia Edition)</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/WM_SSM_new_logo.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Elementary Numerical Analysis (Julia Edition)</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="preface.html">
+   Elementary Numerical Analysis with Julia
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Frontmatter
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Julia: a New Alternative to Python and Matlab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   References
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Numerical Analysis
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="root-finding-by-interval-halving.html">
+   1. Root Finding by Interval Halving (Bisection)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fixed-point-iteration.html">
+   2. Solving Equations by Fixed Point Iteration (of Contraction Mappings)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newtons-method.html">
+   3. Newton’s Method for Solving Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="taylors-theorem.html">
+   4. Taylor’s Theorem and the Accuracy of Linearization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="error-measures-convergence-rates.html">
+   5. Measures of Error and Order of Convergence
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="convergence-rate-of-newtons-method.html">
+   6. The Convergence Rate of Newton’s Method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomial-approximation-error-formulas.html">
+   7. Error Formulas for Polynomial Collocation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="root-finding-without-derivatives.html">
+   8. Root-finding Without Derivatives
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-1-row-reduction.html">
+   9. Solving Simultaneous Linear Equations, Part 1: Row Reduction/Gaussian Elimination
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Future Sections; in Python for now
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-2-pivoting.html">
+   1. Solving Simultaneous Linear Equations, Part 2: Partial Pivoting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-3-lu-factorization.html">
+   2. Solving
+   <span class="math notranslate nohighlight">
+    \(Ax = b\)
+   </span>
+   with LU factorization,
+   <span class="math notranslate nohighlight">
+    \(A = L U\)
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-4-plu-factorization.html">
+   3. Solving
+   <span class="math notranslate nohighlight">
+    \(Ax = b\)
+   </span>
+   With Both Pivoting and LU factorization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-5-error-bounds-condition-numbers.html">
+   4. Error bounds for linear algebra: condition numbers, matrix norms, etc. — Preliminary Version
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomial-collocation%2Bapproximation.html">
+   5. Polynomial Collocation (Interpolation/Extrapolation) and Approximation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomial-collocation-error-formulas.html">
+   6. Error Formulas for Polynomial Collocation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="derivatives-and-the-method-of-undetermined-coefficents.html">
+   7. Approximating Derivatives by the Method of Undetermined Coefficients
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="richardson-extrapolation.html">
+   8. Richardson Extrapolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="definite-integrals-1-building-blocks.html">
+   9. Definite Integrals, Part 1: The Building Blocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="definite-integrals-2-composite-rules.html">
+   10. Definite Integrals, Part 2: The Composite Trapezoid and Midpoint Rules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="definite-integrals-3-simpson-richardson.html">
+   11. Definite Integrals, Part 3: The (Composite) Simpson’s Rule and Richardson Extrapolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="definite-integrals-4-romberg-integration.html">
+   12. Definite Integrals, Part 4: Romberg Integration — Preliminary Version
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ODE-IVP-1-basics-and-Euler.html">
+   13. Solving Initial Value Problems for Ordinary Differential Equations, Part 1: Basic Concepts and Euler’s Method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ODE-IVP-2-Runge-Kutta.html">
+   14. Solving Initial Value Problems for ODEs, Part 2: Runge-Kutta Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ODE-IVP-3-error-results-one-step-methods.html">
+   15. Global Error Bounds for One Step Methods — Preliminary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="numerical_methods_module.html">
+   Notebook for generating the Python module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     numerical_methods_module
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="AddJuliaPackages.html">
+   Add some useful Julia packages, such as PyPlot
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/derivatives-and-the-method-of-undetermined-coefficents-exercises.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/derivatives-and-the-method-of-undetermined-coefficents-exercises.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1">
+   Exercise 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2">
+   Exercise 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-3">
+   Exercise 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-4">
+   Exercise 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-5">
+   Exercise 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-6">
+   Exercise 6
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exercises-on-approximating-derivatives-the-method-of-undetermined-coefficients-and-richardson-extrapolation">
+<h1>Exercises on Approximating Derivatives, the Method of Undetermined Coefficients and Richardson Extrapolation<a class="headerlink" href="#exercises-on-approximating-derivatives-the-method-of-undetermined-coefficients-and-richardson-extrapolation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="exercise-1">
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h2>
+<p>Show that for a three-point one-sided difference approximation of the first derivative</p>
+<div class="math notranslate nohighlight">
+\[Df(x) = \frac{C_{0} f(x) + C_1 f(x + h) + C_2 f(x + 2h)}{h} + O(h^p)\]</div>
+<p>the most accurate choice is <span class="math notranslate nohighlight">\(C_0 = -3/2\)</span>, <span class="math notranslate nohighlight">\(C_1 = 2\)</span>, <span class="math notranslate nohighlight">\(C_2 = -1/2\)</span>, giving</p>
+<div class="math notranslate nohighlight">
+\[Df(x) \approx \frac{-3 f(x) + 4 f(x + h) - f(x + 2h)}{2 h} + O(h^2).\]</div>
+<p>and verify that this is of second order</p>
+<p>Do this by setting up the three equations as above for the coefficients <span class="math notranslate nohighlight">\(C_0\)</span>, <span class="math notranslate nohighlight">\(C_1\)</span> and <span class="math notranslate nohighlight">\(C_2\)</span>, and solving them.
+Do this “by hand”, to get exact fractions as the answers;
+us the two Taylor serei formulas, but now tak advanta of what we saw above, whi cis that the error stsrts at the terms in
+<span class="math notranslate nohighlight">\(D^3f(x)\)</span>, so use the forms</p>
+<div class="math notranslate nohighlight">
+\[f(x+h) = f(x) + Df(x) h + \frac{D^2f(x)}{2} h^2 + \frac{D^3f(x)}{6} h^3 + O(h^4)\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[f(x+2h) = f(x) + 2 Df(x) h + 2 D^2f(x) h^2 + \frac{4 D^3f(x)}{3} h^3 + O(h^4)\]</div>
+</div>
+<div class="section" id="exercise-2">
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h2>
+<p>Repeat Exercise 1, but using the degree of precision method.</p>
+<p>That is, impose the condition of giving the exact value for the derivative at <span class="math notranslate nohighlight">\(x=0\)</span> for the monomial <span class="math notranslate nohighlight">\(f(x) = 1\)</span>,
+then the same for <span class="math notranslate nohighlight">\(f(x) = x\)</span>, and so on until there are enough equations to determine a unique solution for the coefficients.</p>
+</div>
+<div class="section" id="exercise-3">
+<h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h2>
+<p>Verify that the most accurate three-point centered difference approximation of <span class="math notranslate nohighlight">\(D^2 f(x)\)</span>,
+form</p>
+<div class="math notranslate nohighlight">
+\[D^2f(x) \approx \frac{C_{-1} f(x - h) + C_{0} f(x) + C_1 f(x + h)}{h^2}\]</div>
+<p>is given by the coefficients <span class="math notranslate nohighlight">\(C_{-1} = C_1 = 1\)</span>, <span class="math notranslate nohighlight">\(C_0 = -2\)</span>
+in that this is of the highest order; <span class="math notranslate nohighlight">\(p=2\)</span>.</p>
+<p>That is</p>
+<div class="math notranslate nohighlight">
+\[D^2f(x) = \frac{f(x - h) -2 f(x) + f(x + h)}{h^2} + O(h^2).\]</div>
+<p>Do this by hand, and exploit the symmetry.</p>
+<p>Note that it works a bit better than expected, due to the symmetry.</p>
+</div>
+<div class="section" id="exercise-4">
+<h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h2>
+<p>Repeat Exercise 3, but using the degree of precision method.</p>
+</div>
+<div class="section" id="exercise-5">
+<h2>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">¶</a></h2>
+<p>Derive a symmetric five-point approximation of the second derivative, using the Method of Undetermined Coefficients;
+I recomend that you use the simpler second, “monomials” approach.</p>
+<p>Note: try to exploit symmetry to reduce the number of equations that need to be solved.</p>
+</div>
+<div class="section" id="exercise-6">
+<h2>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this headline">¶</a></h2>
+<p>Use the symmetric centered difference approxmation of the second derivative and Richardson extrapolation to get another more accurate approximation of this derivative.</p>
+<p>Then compare to the result in Exercise 5.</p>
+<hr class="docutils" />
+<p>This work is licensed under <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Brenton LeMesurier, College of Charleston (visiting the University of Northern Colorado in Spring 2021)<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

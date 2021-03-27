@@ -56,6 +56,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Notebook for generating the Python module numerical_methods_module" href="numerical_methods_module.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -74,7 +75,7 @@
         <div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="index.html">
   
-  <img src="_static/jupyter-book-logo.png" class="logo" alt="logo">
+  <img src="_static/WM_SSM_new_logo.jpg" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">Elementary Numerical Analysis (Julia Edition)</h1>
@@ -116,38 +117,163 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="julia-notebooks/root-finding-by-interval-halving.html">
+  <a class="reference internal" href="root-finding-by-interval-halving.html">
    1. Root Finding by Interval Halving (Bisection)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="julia-notebooks/fixed-point-iteration.html">
+  <a class="reference internal" href="fixed-point-iteration.html">
    2. Solving Equations by Fixed Point Iteration (of Contraction Mappings)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="julia-notebooks/newtons-method.html">
+  <a class="reference internal" href="newtons-method.html">
    3. Newton’s Method for Solving Equations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks/taylors-theorem.html">
+  <a class="reference internal" href="taylors-theorem.html">
    4. Taylor’s Theorem and the Accuracy of Linearization
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks/error-measures-convergence-rates.html">
+  <a class="reference internal" href="error-measures-convergence-rates.html">
    5. Measures of Error and Order of Convergence
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks/convergence-rate-of-newtons-method.html">
+  <a class="reference internal" href="convergence-rate-of-newtons-method.html">
    6. The Convergence Rate of Newton’s Method
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks/polynomial-approximation-error-formulas.html">
+  <a class="reference internal" href="polynomial-approximation-error-formulas.html">
    7. Error Formulas for Polynomial Collocation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="root-finding-without-derivatives.html">
+   8. Root-finding Without Derivatives
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-1-row-reduction.html">
+   9. Solving Simultaneous Linear Equations, Part 1: Row Reduction/Gaussian Elimination
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Future Sections; in Python for now
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-2-pivoting.html">
+   1. Solving Simultaneous Linear Equations, Part 2: Partial Pivoting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-3-lu-factorization.html">
+   2. Solving
+   <span class="math notranslate nohighlight">
+    \(Ax = b\)
+   </span>
+   with LU factorization,
+   <span class="math notranslate nohighlight">
+    \(A = L U\)
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-4-plu-factorization.html">
+   3. Solving
+   <span class="math notranslate nohighlight">
+    \(Ax = b\)
+   </span>
+   With Both Pivoting and LU factorization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-5-error-bounds-condition-numbers.html">
+   4. Error bounds for linear algebra: condition numbers, matrix norms, etc. — Preliminary Version
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomial-collocation%2Bapproximation.html">
+   5. Polynomial Collocation (Interpolation/Extrapolation) and Approximation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomial-collocation-error-formulas.html">
+   6. Error Formulas for Polynomial Collocation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="derivatives-and-the-method-of-undetermined-coefficents.html">
+   7. Approximating Derivatives by the Method of Undetermined Coefficients
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="richardson-extrapolation.html">
+   8. Richardson Extrapolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="definite-integrals-1-building-blocks.html">
+   9. Definite Integrals, Part 1: The Building Blocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="definite-integrals-2-composite-rules.html">
+   10. Definite Integrals, Part 2: The Composite Trapezoid and Midpoint Rules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="definite-integrals-3-simpson-richardson.html">
+   11. Definite Integrals, Part 3: The (Composite) Simpson’s Rule and Richardson Extrapolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="definite-integrals-4-romberg-integration.html">
+   12. Definite Integrals, Part 4: Romberg Integration — Preliminary Version
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ODE-IVP-1-basics-and-Euler.html">
+   13. Solving Initial Value Problems for Ordinary Differential Equations, Part 1: Basic Concepts and Euler’s Method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ODE-IVP-2-Runge-Kutta.html">
+   14. Solving Initial Value Problems for ODEs, Part 2: Runge-Kutta Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ODE-IVP-3-error-results-one-step-methods.html">
+   15. Global Error Bounds for One Step Methods — Preliminary
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="numerical_methods_module.html">
+   Notebook for generating the Python module
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     numerical_methods_module
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Add some useful Julia packages, such as PyPlot
   </a>
  </li>
 </ul>
@@ -241,7 +367,7 @@
                 
   <div class="section" id="add-some-useful-julia-packages-such-as-pyplot">
 <h1>Add some useful Julia packages, such as PyPlot<a class="headerlink" href="#add-some-useful-julia-packages-such-as-pyplot" title="Permalink to this headline">¶</a></h1>
-<p>These only need to be done once.</p>
+<p>These “Pkg.add” comands only need to be done “once per computer”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Pkg</span>
@@ -251,31 +377,23 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#ENV[&quot;PYTHON&quot;]=&quot;/Applications/anaconda3/bin/python&quot;</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># Use a version of the Python package Matplotlib</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;PyPlot&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># PyPlot seems to need pyqt: some attempts:</span>
-<span class="c">#Pkg.add(&quot;pyqt&quot;)</span>
-<span class="c">#Pkg.add(&quot;PyQt5&quot;)</span>
-<span class="c">#Pkg.add(&quot;PyQt&quot;)</span>
-<span class="c">#Pkg.add(&quot;PySide&quot;)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;PyPlot&quot;</span><span class="p">)</span>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">  Resolving</span> package versions...
+<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/.julia/environments/v1.5/Project.toml`
+<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/.julia/environments/v1.5/Manifest.toml`
 </pre></div>
 </div>
 </div>
 </div>
 <p>Deploy with</p>
-<p><code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">LaTeXStrings</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>using PyPlot
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># Allow LaTeX notation in creating strings, using prefix &quot;L&quot;; for example:</span>
@@ -284,9 +402,50 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">  Resolving</span> package versions...
+<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/.julia/environments/v1.5/Project.toml`
+<span class=" -Color -Color-Bold -Color-Bold-Green">No Changes</span> to `~/.julia/environments/v1.5/Manifest.toml`
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># Add some random number stuff</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;random&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">   Updating</span> registry at `~/.julia/registries/General`
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">following</span> <span class="n">package</span> <span class="n">names</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">resolved</span><span class="p">:</span>
+ <span class="o">*</span> <span class="n">random</span> <span class="p">(</span><span class="ow">not</span> <span class="n">found</span> <span class="ow">in</span> <span class="n">project</span><span class="p">,</span> <span class="n">manifest</span> <span class="ow">or</span> <span class="n">registry</span><span class="p">)</span>
+
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">pkgerror</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">buildbot</span><span class="o">/</span><span class="n">worker</span><span class="o">/</span><span class="n">package_macos64</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">stdlib</span><span class="o">/</span><span class="n">v1</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">Pkg</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">Types</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">52</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">ensure_resolved</span><span class="p">(::</span><span class="n">Pkg</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="p">::</span><span class="n">Array</span><span class="p">{</span><span class="n">Pkg</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">PackageSpec</span><span class="p">,</span><span class="mi">1</span><span class="p">};</span> <span class="n">registry</span><span class="p">::</span><span class="n">Bool</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">buildbot</span><span class="o">/</span><span class="n">worker</span><span class="o">/</span><span class="n">package_macos64</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">stdlib</span><span class="o">/</span><span class="n">v1</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">Pkg</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">Types</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">837</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">add</span><span class="p">(::</span><span class="n">Pkg</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="p">::</span><span class="n">Array</span><span class="p">{</span><span class="n">Pkg</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">PackageSpec</span><span class="p">,</span><span class="mi">1</span><span class="p">};</span> <span class="n">preserve</span><span class="p">::</span><span class="n">Pkg</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">PreserveLevel</span><span class="p">,</span> <span class="n">platform</span><span class="p">::</span><span class="n">Pkg</span><span class="o">.</span><span class="n">BinaryPlatforms</span><span class="o">.</span><span class="n">MacOS</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Iterators</span><span class="o">.</span><span class="n">Pairs</span><span class="p">{</span><span class="n">Union</span><span class="p">{},</span><span class="n">Union</span><span class="p">{},</span><span class="n">Tuple</span><span class="p">{},</span><span class="n">NamedTuple</span><span class="p">{(),</span><span class="n">Tuple</span><span class="p">{}}})</span> <span class="n">at</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">buildbot</span><span class="o">/</span><span class="n">worker</span><span class="o">/</span><span class="n">package_macos64</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">stdlib</span><span class="o">/</span><span class="n">v1</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">Pkg</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">API</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">177</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">add</span><span class="p">(::</span><span class="n">Pkg</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="p">::</span><span class="n">Array</span><span class="p">{</span><span class="n">Pkg</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">PackageSpec</span><span class="p">,</span><span class="mi">1</span><span class="p">})</span> <span class="n">at</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">buildbot</span><span class="o">/</span><span class="n">worker</span><span class="o">/</span><span class="n">package_macos64</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">stdlib</span><span class="o">/</span><span class="n">v1</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">Pkg</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">API</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">139</span>
+ <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="c1">#add#21 at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1.5/Pkg/src/API.jl:67 [inlined]</span>
+ <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="n">add</span> <span class="n">at</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">buildbot</span><span class="o">/</span><span class="n">worker</span><span class="o">/</span><span class="n">package_macos64</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">stdlib</span><span class="o">/</span><span class="n">v1</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">Pkg</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">API</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">67</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="c1">#add#20 at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1.5/Pkg/src/API.jl:66 [inlined]</span>
+ <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="n">add</span> <span class="n">at</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">buildbot</span><span class="o">/</span><span class="n">worker</span><span class="o">/</span><span class="n">package_macos64</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">stdlib</span><span class="o">/</span><span class="n">v1</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">Pkg</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">API</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">66</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="n">add</span><span class="p">(::</span><span class="n">String</span><span class="p">;</span> <span class="n">kwargs</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">Iterators</span><span class="o">.</span><span class="n">Pairs</span><span class="p">{</span><span class="n">Union</span><span class="p">{},</span><span class="n">Union</span><span class="p">{},</span><span class="n">Tuple</span><span class="p">{},</span><span class="n">NamedTuple</span><span class="p">{(),</span><span class="n">Tuple</span><span class="p">{}}})</span> <span class="n">at</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">buildbot</span><span class="o">/</span><span class="n">worker</span><span class="o">/</span><span class="n">package_macos64</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">stdlib</span><span class="o">/</span><span class="n">v1</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">Pkg</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">API</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">65</span>
+ <span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="n">add</span><span class="p">(::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">buildbot</span><span class="o">/</span><span class="n">worker</span><span class="o">/</span><span class="n">package_macos64</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">julia</span><span class="o">/</span><span class="n">stdlib</span><span class="o">/</span><span class="n">v1</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">Pkg</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">API</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">65</span>
+ <span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span> <span class="n">at</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span><span class="mi">2</span>
+ <span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(::</span><span class="n">Function</span><span class="p">,</span> <span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="p">::</span><span class="n">String</span><span class="p">)</span> <span class="n">at</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1091</span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>Deploy with</p>
-<p><code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">LaTeXStrings</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>using random
+</pre></div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -317,13 +476,14 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="numerical_methods_module.html" title="previous page">Notebook for generating the Python module <code class="docutils literal notranslate"><span class="pre">numerical_methods_module</span></code></a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
-          By Brenton LeMesurier, College of Charleston and University of Northern Colorado<br/>
+          By Brenton LeMesurier, College of Charleston (visiting the University of Northern Colorado in Spring 2021)<br/>
         
             &copy; Copyright 2021.<br/>
       </p>
