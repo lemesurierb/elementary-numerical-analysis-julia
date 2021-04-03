@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>14. Error Formulas for Polynomial Collocation &#8212; Elementary Numerical Analysis (Julia Edition)</title>
+    <title>15. Error Formulas for Polynomial Collocation — Python &#8212; Elementary Numerical Analysis (Julia Edition)</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -56,8 +56,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="15. Approximating Derivatives by the Method of Undetermined Coefficients" href="derivatives-and-the-method-of-undetermined-coefficents.html" />
-    <link rel="prev" title="13. Error bounds for linear algebra: condition numbers, matrix norms, etc. — Python" href="simultaneous-linear-equations-5-error-bounds-condition-numbers-python.html" />
+    <link rel="next" title="16. Approximating Derivatives by the Method of Undetermined Coefficients" href="derivatives-and-the-method-of-undetermined-coefficents.html" />
+    <link rel="prev" title="14. Polynomial Collocation (Interpolation/Extrapolation) and Approximation — Python" href="polynomial-collocation%2Bapproximation-python.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -90,7 +90,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="preface.html">
-   Elementary Numerical Analysis with Julia
+   Elementary Numerical Analysis with Julia — Under Construction
   </a>
  </li>
 </ul>
@@ -118,17 +118,17 @@
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="root-finding-by-interval-halving.html">
+  <a class="reference internal" href="root-finding-by-interval-halving-julia.html">
    1. Root Finding by Interval Halving (Bisection)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fixed-point-iteration.html">
+  <a class="reference internal" href="fixed-point-iteration-julia.html">
    2. Solving Equations by Fixed Point Iteration (of Contraction Mappings)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="newtons-method.html">
+  <a class="reference internal" href="newtons-method-julia.html">
    3. Newton’s Method for Solving Equations
   </a>
  </li>
@@ -143,28 +143,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="convergence-rate-of-newtons-method.html">
+  <a class="reference internal" href="newtons-method-convergence-rate.html">
    6. The Convergence Rate of Newton’s Method
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="root-finding-without-derivatives.html">
+  <a class="reference internal" href="root-finding-without-derivatives-julia.html">
    7. Root-finding Without Derivatives
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="simultaneous-linear-equations-1-row-reduction.html">
+  <a class="reference internal" href="simultaneous-linear-equations-1-row-reduction-julia.html">
    8. Solving Simultaneous Linear Equations, Part 1: Row Reduction/Gaussian Elimination
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="machine-numbers-rounding-error-and-error-propagation-python.html">
-   9. Machine Numbers, Rounding Error and Error Propagation — in Python
+  <a class="reference internal" href="machine-numbers-rounding-error-and-error-propagation-julia.html">
+   9. Machine Numbers, Rounding Error and Error Propagation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="simultaneous-linear-equations-2-pivoting-python.html">
-   10. Solving Simultaneous Linear Equations, Part 2: Partial Pivoting — in Python
+   10. Solving Simultaneous Linear Equations, Part 2: Partial Pivoting — Python
   </a>
  </li>
  <li class="toctree-l1">
@@ -177,7 +177,7 @@
    <span class="math notranslate nohighlight">
     \(A = L U\)
    </span>
-   — in Python
+   — Python
   </a>
  </li>
  <li class="toctree-l1">
@@ -186,57 +186,189 @@
    <span class="math notranslate nohighlight">
     \(Ax = b\)
    </span>
-   With Both Pivoting and LU Factorization — in Python
+   With Both Pivoting and LU Factorization — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="simultaneous-linear-equations-5-error-bounds-condition-numbers-python.html">
-   13. Error bounds for linear algebra: condition numbers, matrix norms, etc. — Python
+   13. Simultaneous Linear Equations, Part 5: Error bounds for linear algebra, condition numbers, matrix norms, etc. — with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomial-collocation%2Bapproximation-python.html">
+   14. Polynomial Collocation (Interpolation/Extrapolation) and Approximation — Python
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   14. Error Formulas for Polynomial Collocation
+   15. Error Formulas for Polynomial Collocation — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="derivatives-and-the-method-of-undetermined-coefficents.html">
-   15. Approximating Derivatives by the Method of Undetermined Coefficients
+   16. Approximating Derivatives by the Method of Undetermined Coefficients
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="richardson-extrapolation.html">
+   17. Richardson Extrapolation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="definite-integrals-1-building-blocks-python.html">
-   16. Definite Integrals, Part 1: The Building Blocks — Python
+   18. Definite Integrals, Part 1: The Building Blocks — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="definite-integrals-2-composite-rules-python.html">
-   17. Definite Integrals, Part 2: The Composite Trapezoid and Midpoint Rules — Python
+   19. Definite Integrals, Part 2: The Composite Trapezoid and Midpoint Rules — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="definite-integrals-3-simpson-richardson-python.html">
-   18. Definite Integrals, Part 3: The (Composite) Simpson’s Rule and Richardson Extrapolation — Python
+   20. Definite Integrals, Part 3: The (Composite) Simpson’s Rule and Richardson Extrapolation — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="definite-integrals-4-romberg-integration-python.html">
-   19. Definite Integrals, Part 4: Romberg Integration — Python
+   21. Definite Integrals, Part 4: Romberg Integration — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ODE-IVP-1-basics-and-Euler-python.html">
-   20. Solving Initial Value Problems for Ordinary Differential Equations, Part 1: Basic Concepts and Euler’s Method — Python
+   22. Solving Initial Value Problems for Ordinary Differential Equations, Part 1: Basic Concepts and Euler’s Method — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ODE-IVP-2-Runge-Kutta-python.html">
-   21. Solving Initial Value Problems for ODEs, Part 2: Runge-Kutta Methods — Python
+   23. Solving Initial Value Problems for ODEs, Part 2: Runge-Kutta Methods — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ODE-IVP-3-error-results-one-step-methods.html">
-   22. Global Error Bounds for One Step Methods — Preliminary
+   24. Global Error Bounds for One Step Methods — Preliminary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ODE-IVP-4-system-higher-order-equations.html">
+   25. Initial Value Problems for Ordinary Differential Equations, Part 4: Systems of ODEs and Higher Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ODE-IVP-5-error-control.html">
+   26. Initial Value Problems for Ordinary Differential Equations, Part 5: Error Control and Variable Step Sizes — Preview Edition
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-5-error-bounds-condition-numbers-julia.html">
+   27. Simultaneous Linear Equations, Part 5: Error bounds for linear algebra, condition numbers, matrix norms, etc.
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Exercises
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="root-finding-by-interval-halving-exercises.html">
+   Exercises on the Bisection Method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fixed-point-iteration-exercises.html">
+   Exercises on Fixed Point Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="error-measures-convergence-rates-exercises.html">
+   Exercises on Error Measures and Convergence
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newtons-method-exercises.html">
+   Exercises on Newton’s Method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="root-finding-without-derivatives-exercises.html">
+   Exercises on Root-finding Without Derivatives
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="machine-numbers-rounding-error-and-error-propagation-exercises.html">
+   Exercises on Machine Numbers, Rounding Error and Error Propagation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-exercises.html">
+   Exercises on Solving Simultaneous Linear Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="derivatives-and-the-method-of-undetermined-coefficents-exercises.html">
+   Exercises on Approximating Derivatives, the Method of Undetermined Coefficients and Richardson Extrapolation
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Some Final Project Possibilities
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html">
+   Some Final Project Possibilites
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#minimizing-functions-of-one-and-several-variables">
+   Minimizing Functions of One and Several Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#root-finding-by-repeated-inverse-quadratic-approximation-with-bracketing">
+   Root-finding by Repeated Inverse Quadratic Approximation with Bracketing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#a-more-reliable-secant-method">
+   A More Reliable Secant Method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#computing-eigenvalues-and-eigenvectors">
+   Computing Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#iterative-methods-for-solving-simultaneous-linear-equations-ax-b">
+   Iterative Methods for Solving Simultaneous Linear Equations,
+   <span class="math notranslate nohighlight">
+    \(Ax = b\)
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#solving-simultaneous-nonlinear-equations">
+   Solving Simultaneous Nonlinear Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#fitting-smooth-piecewise-cubic-functions-to-data">
+   Fitting Smooth Piecewise Cubic Functions to Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#least-squares-fitting-to-data-and-functions">
+   Least-Squares Fitting to Data and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#boundary-value-problems-for-differential-equations">
+   Boundary Value Problems for Differential Equations
   </a>
  </li>
 </ul>
@@ -350,12 +482,12 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction">
-   14.1. Introduction
+   15.1. Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#error-in-p-n-x-collocating-a-polynomial-of-degree-n-1">
-   14.2. Error in
+   15.2. Error in
    <span class="math notranslate nohighlight">
     \(P_n(x)\)
    </span>
@@ -367,7 +499,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#error-in-p-n-x-collocating-a-sufficiently-differentiable-function">
-   14.3. Error in
+   15.3. Error in
    <span class="math notranslate nohighlight">
     \(P_n(x)\)
    </span>
@@ -376,7 +508,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#error-bound-with-equally-spaced-nodes-is-o-h-n-1-but">
-   14.4. Error bound with equally spaced nodes is
+   15.4. Error bound with equally spaced nodes is
    <span class="math notranslate nohighlight">
     \(O(h^{n+1})\)
    </span>
@@ -385,22 +517,22 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#possible-failure-of-convergence">
-   14.5. Possible failure of convergence
+   15.5. Possible failure of convergence
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-solution-piecewise-linear-interpolation">
-   14.6. A Solution: piecewise (linear) interpolation
+   15.6. A Solution: piecewise (linear) interpolation
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#preview-definite-integrals-en-route-to-solving-differential-equations">
-     14.6.1. Preview: definite integrals (en route to solving differential equations)
+     15.6.1. Preview: definite integrals (en route to solving differential equations)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aside-computer-graphics-and-smoother-approximating-curves">
-     14.6.2. Aside: computer graphics and smoother approximating curves
+     15.6.2. Aside: computer graphics and smoother approximating curves
     </a>
    </li>
   </ul>
@@ -416,9 +548,8 @@
         
               <div>
                 
-  <div class="section" id="error-formulas-for-polynomial-collocation">
-<h1><span class="section-number">14. </span>Error Formulas for Polynomial Collocation<a class="headerlink" href="#error-formulas-for-polynomial-collocation" title="Permalink to this headline">¶</a></h1>
-<p><strong>Last Revised on Wednesday February 17, after class.</strong></p>
+  <div class="section" id="error-formulas-for-polynomial-collocation-python">
+<h1><span class="section-number">15. </span>Error Formulas for Polynomial Collocation — Python<a class="headerlink" href="#error-formulas-for-polynomial-collocation-python" title="Permalink to this headline">¶</a></h1>
 <p><strong>References:</strong></p>
 <ul class="simple">
 <li><p>Section 3.2.1 <em>Interpolation error formula</em> of <a class="reference external" href="../references.html#Sauer">Sauer</a></p></li>
@@ -426,7 +557,7 @@
 <li><p>Section 4.2 <em>Errors in Polynomial Interpolation</em> of <a class="reference external" href="../references.html#Chenney-Kincaid">Chenney&amp;Kincaid</a></p></li>
 </ul>
 <div class="section" id="introduction">
-<h2><span class="section-number">14.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">15.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>When a polynomial <span class="math notranslate nohighlight">\(P_n\)</span> is given by collocation to <span class="math notranslate nohighlight">\(n+1\)</span> points <span class="math notranslate nohighlight">\((x_i, y_i)\)</span>, <span class="math notranslate nohighlight">\(y_i = f(x_i)\)</span> on the graph of a function <span class="math notranslate nohighlight">\(f\)</span>, one can ask how accurate it is as an approximation of <span class="math notranslate nohighlight">\(f\)</span> at points <span class="math notranslate nohighlight">\(x\)</span> other than the nodes: what is the error <span class="math notranslate nohighlight">\(E(x) = f(x) - P(x)\)</span>?</p>
 <p>As is often the case, the result is motivated by considering the simplest “non-trival case”:
 <span class="math notranslate nohighlight">\(f\)</span> a polynomial of degree one too high for an exact fit, so of degree <span class="math notranslate nohighlight">\(n+1\)</span>.
@@ -441,7 +572,7 @@ The result is also analogous to the familiar error formula for Taylor polynonial
 </div>
 </div>
 <div class="section" id="error-in-p-n-x-collocating-a-polynomial-of-degree-n-1">
-<h2><span class="section-number">14.2. </span>Error in <span class="math notranslate nohighlight">\(P_n(x)\)</span> collocating a polynomial of degree <span class="math notranslate nohighlight">\(n+1\)</span><a class="headerlink" href="#error-in-p-n-x-collocating-a-polynomial-of-degree-n-1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">15.2. </span>Error in <span class="math notranslate nohighlight">\(P_n(x)\)</span> collocating a polynomial of degree <span class="math notranslate nohighlight">\(n+1\)</span><a class="headerlink" href="#error-in-p-n-x-collocating-a-polynomial-of-degree-n-1" title="Permalink to this headline">¶</a></h2>
 <p>With <span class="math notranslate nohighlight">\(f(x) = c_{n+1} x^{n+1} + c_{n} x^{n} + \cdots + c_0\)</span> a polynomial of degree <span class="math notranslate nohighlight">\(n+1\)</span> and <span class="math notranslate nohighlight">\(P_n(x)\)</span> the unique polynomial of degree at most <span class="math notranslate nohighlight">\(n\)</span> that collocates with it at the <span class="math notranslate nohighlight">\(n+1\)</span> nodes <span class="math notranslate nohighlight">\(x_0, \dots x_n\)</span>, the error</p>
 <div class="math notranslate nohighlight">
 \[ E_n(x) = f(x) - P(x) \]</div>
@@ -463,7 +594,7 @@ E_n(x) = f(x) - P_n(x) = \frac{D^{n+1}f(x)}{(n+1)!} (x-x_0) \cdots (x-x_n)
 \]</div>
 </div>
 <div class="section" id="error-in-p-n-x-collocating-a-sufficiently-differentiable-function">
-<h2><span class="section-number">14.3. </span>Error in <span class="math notranslate nohighlight">\(P_n(x)\)</span> collocating a sufficiently differentiable function<a class="headerlink" href="#error-in-p-n-x-collocating-a-sufficiently-differentiable-function" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">15.3. </span>Error in <span class="math notranslate nohighlight">\(P_n(x)\)</span> collocating a sufficiently differentiable function<a class="headerlink" href="#error-in-p-n-x-collocating-a-sufficiently-differentiable-function" title="Permalink to this headline">¶</a></h2>
 <p><strong>Theorem 1.</strong>
 For a function <span class="math notranslate nohighlight">\(f\)</span> with continuous derivative of order <span class="math notranslate nohighlight">\(n+1\)</span> <span class="math notranslate nohighlight">\(D^{n+1}f\)</span>,
 the polynomial <span class="math notranslate nohighlight">\(P_n\)</span> of degree at most <span class="math notranslate nohighlight">\(n\)</span> that fits the points <span class="math notranslate nohighlight">\((x_i, f(x_i))\)</span> <span class="math notranslate nohighlight">\(0 \leq i \leq n\)</span> differs from <span class="math notranslate nohighlight">\(f\)</span> by</p>
@@ -481,7 +612,7 @@ e_n(x) = f(x) - p_n(x) = \frac{D^{n+1}f(\xi)}{(n+1)!} (x-x_0)^{n+1},\, \text{som
 <p>This is effectively the limit when all the <span class="math notranslate nohighlight">\(x_i_x\)</span> congeal to <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
 </div>
 <div class="section" id="error-bound-with-equally-spaced-nodes-is-o-h-n-1-but">
-<h2><span class="section-number">14.4. </span>Error bound with equally spaced nodes is <span class="math notranslate nohighlight">\(O(h^{n+1})\)</span>, but …<a class="headerlink" href="#error-bound-with-equally-spaced-nodes-is-o-h-n-1-but" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">15.4. </span>Error bound with equally spaced nodes is <span class="math notranslate nohighlight">\(O(h^{n+1})\)</span>, but …<a class="headerlink" href="#error-bound-with-equally-spaced-nodes-is-o-h-n-1-but" title="Permalink to this headline">¶</a></h2>
 <p>An important special case is when there is a single parameter <span class="math notranslate nohighlight">\(h\)</span> describing the spacing of the nodes; when they are the equally spaced values <span class="math notranslate nohighlight">\(x_i = a + i h\)</span>, <span class="math notranslate nohighlight">\(0 \leq i \leq n\)</span>, so that <span class="math notranslate nohighlight">\(x_0 = a\)</span> and <span class="math notranslate nohighlight">\(x_n = b\)</span> with <span class="math notranslate nohighlight">\(h = \displaystyle \frac{b-a}{n}\)</span>.
 Then there is a somewhat more practically usable error bound:</p>
 <p><strong>Theorem 2.</strong>
@@ -493,7 +624,7 @@ For <span class="math notranslate nohighlight">\(x \in [a,b]\)</span> and the ab
 <p>where <span class="math notranslate nohighlight">\(M_{n+1} = \max\limits_{x \in [a,b]} | D^{n+1}f(x)|\)</span>.</p>
 </div>
 <div class="section" id="possible-failure-of-convergence">
-<h2><span class="section-number">14.5. </span>Possible failure of convergence<a class="headerlink" href="#possible-failure-of-convergence" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">15.5. </span>Possible failure of convergence<a class="headerlink" href="#possible-failure-of-convergence" title="Permalink to this headline">¶</a></h2>
 <p>A major practical problem with this error bound is that is does not in general guarantee convergence
 <span class="math notranslate nohighlight">\(P_n(x) \to f(x)\)</span> as <span class="math notranslate nohighlight">\(n \to \infty\)</span> with fixed interval <span class="math notranslate nohighlight">\([a, b]\)</span>, because in some cases <span class="math notranslate nohighlight">\(M_{n+1}\)</span> grows too fast.</p>
 <p>A famous example is the “Witch of Agnesi” (so-called because it was introduced by Maria Agnesi,
@@ -605,7 +736,7 @@ author of the first textbook on differential and integral calculus).</p>
 </div>
 </div>
 <div class="section" id="a-solution-piecewise-linear-interpolation">
-<h2><span class="section-number">14.6. </span>A Solution: piecewise (linear) interpolation<a class="headerlink" href="#a-solution-piecewise-linear-interpolation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">15.6. </span>A Solution: piecewise (linear) interpolation<a class="headerlink" href="#a-solution-piecewise-linear-interpolation" title="Permalink to this headline">¶</a></h2>
 <p>A solution to this problem is to use collocation with just a fixed number of nodes <span class="math notranslate nohighlight">\(m\)</span> as <span class="math notranslate nohighlight">\(h \to 0\)</span> and the total node count <span class="math notranslate nohighlight">\(n \to \infty\)</span>.
 That is, for each <span class="math notranslate nohighlight">\(x\)</span>, approximate <span class="math notranslate nohighlight">\(f(x)\)</span> using just data from a suitable choice of <span class="math notranslate nohighlight">\(m+1\)</span> nodes near <span class="math notranslate nohighlight">\(x\)</span>.
 Then <span class="math notranslate nohighlight">\(M_{m+1}\)</span> is a constant, and one has the convergence result</p>
@@ -628,7 +759,7 @@ and the above error formula, now with <span class="math notranslate nohighlight"
 <p>with <span class="math notranslate nohighlight">\(M_2 = \max\limits_{x \in [a,b]} | D^2f(x)|\)</span>.</p>
 <p>Now clearly, as <span class="math notranslate nohighlight">\(n \to \infty\)</span>, the error at each <span class="math notranslate nohighlight">\(x\)</span>-value converges to zero.</p>
 <div class="section" id="preview-definite-integrals-en-route-to-solving-differential-equations">
-<h3><span class="section-number">14.6.1. </span>Preview: definite integrals (en route to solving differential equations)<a class="headerlink" href="#preview-definite-integrals-en-route-to-solving-differential-equations" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.6.1. </span>Preview: definite integrals (en route to solving differential equations)<a class="headerlink" href="#preview-definite-integrals-en-route-to-solving-differential-equations" title="Permalink to this headline">¶</a></h3>
 <p>Integrating this piecewise linear approximation over interval <span class="math notranslate nohighlight">\([a, b]\)</span> gives the Compound Trapezoid Rule approximation of <span class="math notranslate nohighlight">\(\int_a^b f(x) dx\)</span>.
 As we will soon see, this also has error at worst <span class="math notranslate nohighlight">\(O(h^2), = O(1/n^2)\)</span>:
 each doubling of effort reduces errors by a factor of about four.</p>
@@ -637,7 +768,7 @@ that uses piecewise quadratic interpolation and we will see that this improves t
 each doubling of effort reduces errors by a factor of about 16.</p>
 </div>
 <div class="section" id="aside-computer-graphics-and-smoother-approximating-curves">
-<h3><span class="section-number">14.6.2. </span>Aside: computer graphics and smoother approximating curves<a class="headerlink" href="#aside-computer-graphics-and-smoother-approximating-curves" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">15.6.2. </span>Aside: computer graphics and smoother approximating curves<a class="headerlink" href="#aside-computer-graphics-and-smoother-approximating-curves" title="Permalink to this headline">¶</a></h3>
 <p>Computer graphics often draws graphs from data points this way, most often with either piecewise linear or piecewise cubic (<span class="math notranslate nohighlight">\(m=3\)</span>) approximation.</p>
 <p>However, this always gives sharp “corners” at the nodes.
 That is unavoidable with piecewise linear curves, but for higher degrees there are modifications of this strategy that give smoother curves: piecewise cubics turn out to work very nicely for that.</p>
@@ -675,8 +806,8 @@ That is unavoidable with piecewise linear curves, but for higher degrees there a
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="simultaneous-linear-equations-5-error-bounds-condition-numbers-python.html" title="previous page"><span class="section-number">13. </span>Error bounds for linear algebra: condition numbers, matrix norms, etc. — Python</a>
-    <a class='right-next' id="next-link" href="derivatives-and-the-method-of-undetermined-coefficents.html" title="next page"><span class="section-number">15. </span>Approximating Derivatives by the Method of Undetermined Coefficients</a>
+    <a class='left-prev' id="prev-link" href="polynomial-collocation%2Bapproximation-python.html" title="previous page"><span class="section-number">14. </span>Polynomial Collocation (Interpolation/Extrapolation) and Approximation — Python</a>
+    <a class='right-next' id="next-link" href="derivatives-and-the-method-of-undetermined-coefficents.html" title="next page"><span class="section-number">16. </span>Approximating Derivatives by the Method of Undetermined Coefficients</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

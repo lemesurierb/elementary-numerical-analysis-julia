@@ -56,6 +56,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Exercises on Approximating Derivatives, the Method of Undetermined Coefficients and Richardson Extrapolation" href="derivatives-and-the-method-of-undetermined-coefficents-exercises.html" />
+    <link rel="prev" title="Exercises on Machine Numbers, Rounding Error and Error Propagation" href="machine-numbers-rounding-error-and-error-propagation-exercises.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -88,7 +90,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="preface.html">
-   Elementary Numerical Analysis with Julia
+   Elementary Numerical Analysis with Julia — Under Construction
   </a>
  </li>
 </ul>
@@ -116,17 +118,17 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="root-finding-by-interval-halving.html">
+  <a class="reference internal" href="root-finding-by-interval-halving-julia.html">
    1. Root Finding by Interval Halving (Bisection)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fixed-point-iteration.html">
+  <a class="reference internal" href="fixed-point-iteration-julia.html">
    2. Solving Equations by Fixed Point Iteration (of Contraction Mappings)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="newtons-method.html">
+  <a class="reference internal" href="newtons-method-julia.html">
    3. Newton’s Method for Solving Equations
   </a>
  </li>
@@ -141,28 +143,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="convergence-rate-of-newtons-method.html">
+  <a class="reference internal" href="newtons-method-convergence-rate.html">
    6. The Convergence Rate of Newton’s Method
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="root-finding-without-derivatives.html">
+  <a class="reference internal" href="root-finding-without-derivatives-julia.html">
    7. Root-finding Without Derivatives
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="simultaneous-linear-equations-1-row-reduction.html">
+  <a class="reference internal" href="simultaneous-linear-equations-1-row-reduction-julia.html">
    8. Solving Simultaneous Linear Equations, Part 1: Row Reduction/Gaussian Elimination
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="machine-numbers-rounding-error-and-error-propagation-python.html">
-   9. Machine Numbers, Rounding Error and Error Propagation — in Python
+  <a class="reference internal" href="machine-numbers-rounding-error-and-error-propagation-julia.html">
+   9. Machine Numbers, Rounding Error and Error Propagation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="simultaneous-linear-equations-2-pivoting-python.html">
-   10. Solving Simultaneous Linear Equations, Part 2: Partial Pivoting — in Python
+   10. Solving Simultaneous Linear Equations, Part 2: Partial Pivoting — Python
   </a>
  </li>
  <li class="toctree-l1">
@@ -175,7 +177,7 @@
    <span class="math notranslate nohighlight">
     \(A = L U\)
    </span>
-   — in Python
+   — Python
   </a>
  </li>
  <li class="toctree-l1">
@@ -184,57 +186,189 @@
    <span class="math notranslate nohighlight">
     \(Ax = b\)
    </span>
-   With Both Pivoting and LU Factorization — in Python
+   With Both Pivoting and LU Factorization — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="simultaneous-linear-equations-5-error-bounds-condition-numbers-python.html">
-   13. Error bounds for linear algebra: condition numbers, matrix norms, etc. — Python
+   13. Simultaneous Linear Equations, Part 5: Error bounds for linear algebra, condition numbers, matrix norms, etc. — with Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="polynomial-collocation%2Bapproximation-python.html">
+   14. Polynomial Collocation (Interpolation/Extrapolation) and Approximation — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="polynomial-collocation-error-formulas-python.html">
-   14. Error Formulas for Polynomial Collocation
+   15. Error Formulas for Polynomial Collocation — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="derivatives-and-the-method-of-undetermined-coefficents.html">
-   15. Approximating Derivatives by the Method of Undetermined Coefficients
+   16. Approximating Derivatives by the Method of Undetermined Coefficients
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="richardson-extrapolation.html">
+   17. Richardson Extrapolation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="definite-integrals-1-building-blocks-python.html">
-   16. Definite Integrals, Part 1: The Building Blocks — Python
+   18. Definite Integrals, Part 1: The Building Blocks — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="definite-integrals-2-composite-rules-python.html">
-   17. Definite Integrals, Part 2: The Composite Trapezoid and Midpoint Rules — Python
+   19. Definite Integrals, Part 2: The Composite Trapezoid and Midpoint Rules — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="definite-integrals-3-simpson-richardson-python.html">
-   18. Definite Integrals, Part 3: The (Composite) Simpson’s Rule and Richardson Extrapolation — Python
+   20. Definite Integrals, Part 3: The (Composite) Simpson’s Rule and Richardson Extrapolation — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="definite-integrals-4-romberg-integration-python.html">
-   19. Definite Integrals, Part 4: Romberg Integration — Python
+   21. Definite Integrals, Part 4: Romberg Integration — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ODE-IVP-1-basics-and-Euler-python.html">
-   20. Solving Initial Value Problems for Ordinary Differential Equations, Part 1: Basic Concepts and Euler’s Method — Python
+   22. Solving Initial Value Problems for Ordinary Differential Equations, Part 1: Basic Concepts and Euler’s Method — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ODE-IVP-2-Runge-Kutta-python.html">
-   21. Solving Initial Value Problems for ODEs, Part 2: Runge-Kutta Methods — Python
+   23. Solving Initial Value Problems for ODEs, Part 2: Runge-Kutta Methods — Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ODE-IVP-3-error-results-one-step-methods.html">
-   22. Global Error Bounds for One Step Methods — Preliminary
+   24. Global Error Bounds for One Step Methods — Preliminary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ODE-IVP-4-system-higher-order-equations.html">
+   25. Initial Value Problems for Ordinary Differential Equations, Part 4: Systems of ODEs and Higher Order ODEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ODE-IVP-5-error-control.html">
+   26. Initial Value Problems for Ordinary Differential Equations, Part 5: Error Control and Variable Step Sizes — Preview Edition
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simultaneous-linear-equations-5-error-bounds-condition-numbers-julia.html">
+   27. Simultaneous Linear Equations, Part 5: Error bounds for linear algebra, condition numbers, matrix norms, etc.
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Exercises
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="root-finding-by-interval-halving-exercises.html">
+   Exercises on the Bisection Method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fixed-point-iteration-exercises.html">
+   Exercises on Fixed Point Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="error-measures-convergence-rates-exercises.html">
+   Exercises on Error Measures and Convergence
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newtons-method-exercises.html">
+   Exercises on Newton’s Method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="root-finding-without-derivatives-exercises.html">
+   Exercises on Root-finding Without Derivatives
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="machine-numbers-rounding-error-and-error-propagation-exercises.html">
+   Exercises on Machine Numbers, Rounding Error and Error Propagation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Exercises on Solving Simultaneous Linear Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="derivatives-and-the-method-of-undetermined-coefficents-exercises.html">
+   Exercises on Approximating Derivatives, the Method of Undetermined Coefficients and Richardson Extrapolation
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Some Final Project Possibilities
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html">
+   Some Final Project Possibilites
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#minimizing-functions-of-one-and-several-variables">
+   Minimizing Functions of One and Several Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#root-finding-by-repeated-inverse-quadratic-approximation-with-bracketing">
+   Root-finding by Repeated Inverse Quadratic Approximation with Bracketing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#a-more-reliable-secant-method">
+   A More Reliable Secant Method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#computing-eigenvalues-and-eigenvectors">
+   Computing Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#iterative-methods-for-solving-simultaneous-linear-equations-ax-b">
+   Iterative Methods for Solving Simultaneous Linear Equations,
+   <span class="math notranslate nohighlight">
+    \(Ax = b\)
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#solving-simultaneous-nonlinear-equations">
+   Solving Simultaneous Nonlinear Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#fitting-smooth-piecewise-cubic-functions-to-data">
+   Fitting Smooth Piecewise Cubic Functions to Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#least-squares-fitting-to-data-and-functions">
+   Least-Squares Fitting to Data and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project-possibilities.html#boundary-value-problems-for-differential-equations">
+   Boundary Value Problems for Differential Equations
   </a>
  </li>
 </ul>
@@ -496,6 +630,8 @@ A = \left[ \begin{array}{ccc} 4. &amp; 2. &amp; 1. \\ 9. &amp; 3. &amp; 1. \\ 25
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="machine-numbers-rounding-error-and-error-propagation-exercises.html" title="previous page">Exercises on Machine Numbers, Rounding Error and Error Propagation</a>
+    <a class='right-next' id="next-link" href="derivatives-and-the-method-of-undetermined-coefficents-exercises.html" title="next page">Exercises on Approximating Derivatives, the Method of Undetermined Coefficients and Richardson Extrapolation</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
