@@ -494,6 +494,18 @@
   <a class="reference internal nav-link" href="#properties-of-induced-matrix-norms">
    27.3. Properties of (induced) matrix norms
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#julia-note-function-norm">
+     27.3.1. Julia Note: function
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       norm
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#relative-error-bound-and-condition-number">
@@ -581,6 +593,12 @@ Indeed one can have <span class="math notranslate nohighlight">\(A B = 0\)</span
 <p><strong>Aside:</strong> There are other matrix norms of use in some contexts, in particular the
 <a class="reference external" href="https://en.wikipedia.org/wiki/Matrix_norm#Frobenius_norm">Frobenius norm</a>.
 Then the above properties are often used to <em>define</em> what it is to be a matrix form, much as the the first four define what it is to be a vector norm.</p>
+<div class="section" id="julia-note-function-norm">
+<h3><span class="section-number">27.3.1. </span>Julia Note: function <code class="docutils literal notranslate"><span class="pre">norm</span></code><a class="headerlink" href="#julia-note-function-norm" title="Permalink to this headline">¶</a></h3>
+<p>Julia provides the function <code class="docutils literal notranslate"><span class="pre">norm</span></code> for evaluating matrix norms.
+The default usage <code class="docutils literal notranslate"><span class="pre">norm(A)</span></code> computes <span class="math notranslate nohighlight">\(\| A \|_2\)</span>, which one can also specify explicitly with <code class="docutils literal notranslate"><span class="pre">norm(A,</span> <span class="pre">2)</span></code>;
+to get the maximum norm <span class="math notranslate nohighlight">\(\| A \|_\infty\)</span> one uses <code class="docutils literal notranslate"><span class="pre">norm(A,</span> <span class="pre">Inf)</span></code>.</p>
+</div>
 </div>
 <div class="section" id="relative-error-bound-and-condition-number">
 <h2><span class="section-number">27.4. </span>Relative error bound and condition number<a class="headerlink" href="#relative-error-bound-and-condition-number" title="Permalink to this headline">¶</a></h2>
@@ -603,9 +621,10 @@ From this, an upper bound on the absolute error can be computed if needed.</p>
 At the other extreme, the identity matrix <span class="math notranslate nohighlight">\(I\)</span> has norm 1 and condition number 1 (using any norm), and this is the best possible because in general <span class="math notranslate nohighlight">\(\kappa(A) \geq 1\)</span>. (This follows from sub-multiplicativity.)</p>
 <div class="section" id="aside-estimating-a-1-infty-and-thence-the-condition-number">
 <h3><span class="section-number">27.4.1. </span>Aside: estimating <span class="math notranslate nohighlight">\(\|A^{-1}\|_\infty\)</span> and thence the condition number<a class="headerlink" href="#aside-estimating-a-1-infty-and-thence-the-condition-number" title="Permalink to this headline">¶</a></h3>
-<p>In Julia, a good approximation of the condition number <span class="math notranslate nohighlight">\(\kappa_\infty(A)\)</span> is given by <code class="docutils literal notranslate"><span class="pre">cond(A,</span> <span class="pre">Inf)</span></code>.
+<p>In Julia,, good approximations of condition numbers are given by the function <code class="docutils literal notranslate"><span class="pre">cond</span></code>.
 <br>
-As with function <code class="docutils literal notranslate"><span class="pre">norm()</span></code>, the simple form <code class="docutils literal notranslate"><span class="pre">cond(A)</span></code> defaults to using the 2-norm, based on the Euclidian length <span class="math notranslate nohighlight">\(\| \cdot \|_2\)</span> for vectors.</p>
+As with function <code class="docutils literal notranslate"><span class="pre">norm()</span></code>, the simple form <code class="docutils literal notranslate"><span class="pre">cond(A)</span></code> defaults to <span class="math notranslate nohighlight">\(\kappa_2(A)\)</span> based on the Euclidian length <span class="math notranslate nohighlight">\(\| \cdot \|_2\)</span> for vectors;
+to get the infinity norm version <span class="math notranslate nohighlight">\(\kappa_\infty(A)\)</span> use <code class="docutils literal notranslate"><span class="pre">cond(A,</span> <span class="pre">Inf)</span></code>.</p>
 <p>This is not done exactly, since computing the inverse is a lot of work for large matrices and good estimates can be got far more quickly.
 The basic idea is start with the formula</p>
 <div class="math notranslate nohighlight">
